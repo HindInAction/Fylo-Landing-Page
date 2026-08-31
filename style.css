@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #3065f8;
+    --dark-blue: #070439;
+    --white-purple: #f8f8fe;
+    --light-gray: hsl(0, 0%, 75%);
+    --purple: #585989;
+    --gray: hsl(0, 0%, 75%); 
+    --green: #3c9f8f; 
+
+}
+
+body{
+    font-family:"Open Sans", sans-serif ;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Raleway", sans-serif;
+}
+
+a { 
+    text-decoration: none;
+}
+
+
+/* Utility Classes */
+
+.container {
+    padding: 0 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.btn {
+background-color: var(--blue);
+color: #f8f8fe;
+padding: 10px 3rem;
+border: none;
+cursor: pointer;
+transition: 0.3s all ease;
+}
+
+.btn:hover {
+    background-color: #2653ce;
+}
+
+/* Header START  */
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: 3rem;
+}
+
+/* Header END  */
+
+/* Home START  */
+#home {
+    height: 100vh;
+}
+.home-content,.team-content,.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 0;
+}
+.home-content {
+    gap: 6rem;
+}
+
+.home-content img {
+    max-width: 100%;
+}
+
+.home-text h1 {
+    color: var(--dark-blue);
+    font-size: 3rem;
+}
+.home-text p {
+    margin: 1.5rem 0;
+}
+
+.home-text form  {
+ width: 100%;
+}
+
+.home-text form  input{
+ width: 60%;
+ padding: 8px 8px;
+ color: #7879ab;
+}
+/* Home END  */
+/* Team Start  */
+#team {
+    background-image: url('images/bg-curve-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 4rem; 
+    min-height: 100vh;
+    
+}
+
+.background {
+    background-color: var(--white-purple);
+    min-height: 100vh;
+}
+.team-content {
+    align-items: flex-start;
+
+    gap: 8.5rem;
+}
+
+.team-content img {
+    max-width: 100%;
+}
+.team-text {
+    padding-bottom: 3rem;
+}
+.team-text h2 {
+    color: var(--dark-blue);
+    font-size: 2.5rem;
+}
+.team-text p {
+    margin: 1.5rem 0;
+}
+
+.team-text a { 
+    color: var(--green);
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--green);
+    display: inline-block;
+}
+
+.team-text a i { 
+    color: var(--green);
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: #585989;
+    padding: 2rem 3rem;
+    margin: 1rem 0;
+    width: 80%;
+    color: var(--dark-blue);
+    box-shadow: 0 8px 24px rgba(88, 70, 140, 0.08);
+}
+
+.card  p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--dark-blue);
+}
+.card .testimonial {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.card .testimonial img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.card .testimonial p,.card .testimonial h4  { 
+    margin: 0;
+    font-size: 12px;
+}
+/* Team END  */
+/* Contact START  */
+#contact {
+    background-color: var(--purple);
+}
+
+.contact-content {
+    padding: 6rem 0;
+    gap: 9rem;
+}
+
+.contact-text  h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.contact-text  p {
+    font-size: 14px;
+    color: var(--light-gray);
+    margin-top: 1rem;
+}
+
+.contact-content form input{
+    display: block;
+    width: 100%;
+    padding: 8px 8px;
+    color: #7879ab;
+    margin-bottom: 1rem;
+}
+/* Contact END  */
+
+/* Footer START  */
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 6.5rem 0;
+}
+
+.footer-content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2fr repeat(3,1fr);
+    justify-content: space-between;
+    gap: 2rem;
+    
+}
+.footer-content h3 {
+    font-weight: 400;
+}
+.footer-content a {
+    display: block;
+    color: rgba(255, 255, 255, 0.591);
+    margin: 8px 0;
+    font-weight: 300;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.799);
+    margin: 10px 0;
+}
+
+.social {
+   text-align: center;
+}
+.social i{
+   font-size: 2rem;
+}
+
+.contact-info i {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.humburger {
+    display: none;
+}
+/* Footer END  */
+/* Responsiveness START  */
+/* Tablet View START  */
+@media (max-width: 1000px) {
+
+
+    #home{ 
+        height: 100%;
+    }
+
+    .home-content, .team-content, .contact-content ,.footer-content{
+         grid-template-columns: repeat(1,1fr);
+         align-items: center;
+        justify-content: center;
+    }
+
+    .home-content {
+        padding: 6rem 1.5rem;
+        min-height: 100%;
+        gap: 4rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home-content  img {
+        width: 60%;
+    }
+    .home-text {
+        text-align: center;
+    }
+
+    .home-text h1{
+        font-size: 2rem;
+    }
+    .home-text form input {
+        margin-bottom: 0.8rem;;
+        width: 100%;
+    }
+
+    #team {
+        padding-top: 2rem; 
+    }
+    
+    .team-text {
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+
+    .contact-content  {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        gap: 1rem;
+    }
+
+
+    .contact-content  form input {
+        margin: 0.5rem auto;
+        width: 70%;
+    }
+
+
+    .team-content {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .team-content h2 {
+        margin-top: 2rem;
+    }
+
+    .team-text p , .team-text h2 {
+        text-align: center;
+    }
+    .footer-content div , .footer-top{
+        text-align: center;
+    }
+    .card {
+        margin: 1rem auto;
+        text-align: left;
+    }
+    .card p {
+        text-align: left;
+    }
+
+   
+    .team-content {
+        text-align: center;
+    }
+    .team-content img {
+    max-width: 60%;
+    margin: auto;
+    }
+
+    .contact-text   { 
+
+        text-align: center;
+    }
+
+    .logo
+    {
+        width: 90px;
+        
+    }
+}/* Tablet View END  */
+
+/* MOBILE View START  */
+
+@media (max-width:650px) {
+
+    #team {
+    background-image: url('images/bg-curve-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+
+    .humburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header {
+        position: relative;
+        padding: 0;
+    }
+
+    .navbar ul a {
+        color: white;
+    }
+    .navbar ul {
+        visibility: hidden;
+        opacity: 0;
+
+        flex-direction: column;
+        color: white;
+        background-color: var(--dark-blue);
+        justify-content: flex-start;
+        padding-top: 2rem;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        height: 100vh;
+        width: 100%;
+    }
+
+    .navbar ul.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .humburger .open, .humburger .close {
+        display: none;
+    }
+
+    .humburger .open.active, .humburger .close.active {
+        display: block;
+        font-size: 1.2rem;
+    } 
+
+
+}
+/* MOBILE View END  */
